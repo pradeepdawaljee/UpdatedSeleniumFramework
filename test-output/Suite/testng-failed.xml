@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.framework.Package.utilities.MyTestNGListners"/>
+  </listeners>
+  <test name="Test(failed)">
+    <parameter name="environment" value="QA"/>
+    <parameter name="browserType" value="chrome"/>
+    <classes>
+      <class name="com.framework.Package.tests.SmokeTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="ExtentReporting"/>
+          <include name="openBrowser"/>
+          <include name="invalidLoginTest"/>
+          <include name="end"/>
+        </methods>
+      </class> <!-- com.framework.Package.tests.SmokeTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
