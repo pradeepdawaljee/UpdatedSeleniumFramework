@@ -1,1 +1,7 @@
-2022-10-14 22:32:46,029 INFO c.f.P.c.BaseClass [main] Zipping ScreenShots.zip completed successfully
+2022-10-16 17:26:04,171 INFO c.f.P.d.CommonMethods [main] Clicking on element ..... By.linkText: Log in
+2022-10-16 17:26:04,272 INFO c.f.P.d.CommonMethods [main] Clearing the textbox field.....By.name: Email
+2022-10-16 17:26:04,351 INFO c.f.P.d.CommonMethods [main] Entering value....abc@gmail.com into the textbox field....By.name: Email
+2022-10-16 17:26:04,416 INFO c.f.P.d.CommonMethods [main] Clearing the textbox field.....By.name: Password
+2022-10-16 17:26:04,507 INFO c.f.P.d.CommonMethods [main] Entering value....123456 into the textbox field....By.name: Password
+2022-10-16 17:26:05,052 INFO c.f.P.d.CommonMethods [main] Clicking on element ..... By.xpath: //input[@value='Log in']
+2022-10-16 17:26:05,874 INFO c.f.P.c.BaseClass [main] Zipping ScreenShots.zip completed successfully

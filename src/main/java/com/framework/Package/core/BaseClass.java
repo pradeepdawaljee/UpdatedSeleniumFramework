@@ -19,6 +19,8 @@ import com.framework.Package.reader.ExcelClass;
 import com.framework.Package.reader.PropertyFileReader;
 import com.framework.Package.report.ExtentReport;
 import com.framework.Package.utilities.ZIPFileUtility;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 //import com.framework.Package.reader.PropertyFileReader;
 
 public class BaseClass extends ExtentReport {
@@ -36,18 +38,22 @@ public class BaseClass extends ExtentReport {
 		data=new ExcelClass(System.getProperty("user.dir")+"/src/main/resources/excelFiles/AppLogin.xlsx");
 
 		if(browserType.equalsIgnoreCase("chrome")){
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();			
 		}else if(browserType.equalsIgnoreCase("firefox")){
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/Drivers/geckodriver.exe");
+			//System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/Drivers/geckodriver.exe");
+			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
 		}else if(browserType.equalsIgnoreCase("ie")){
-			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/Drivers/IEDriverServer.exe");
+			//System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/Drivers/IEDriverServer.exe");
+			WebDriverManager.iedriver().setup();
 			driver=new InternetExplorerDriver();
 		}else{
 			browserType="Chrome";
 			System.out.println("As invalid Browser Name was provided. Hence Opening Chrome Browser");
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 		}		
 		
